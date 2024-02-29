@@ -9,5 +9,7 @@ selenium
 webscraping
 scrapy-selenium
 validators
-pydantic
+pydantic 
 pytest
+elementpath
+PyPDF2
