@@ -1,4 +1,0 @@
-level,file_size_bytes,num_pages,s3_pypdf_text_link,s3_grobid_text_link,file_path,encryption,date_updated
-Level I,829422,27,s3://s3-assignment2/files_txt/Grobid_RR_2024_l1_combined.txt,s3://s3-assignment2/files_txt/Grobid_RR_2024_l1_combined.txt,../../sourcedata/2024-l1-topics-combined-2.pdf,No,02/29/2024
-Level II,261786,25,s3://s3-assignment2/files_txt/PyPDF_RR_2024_l2_combined.txt,s3://s3-assignment2/files_txt/Grobid_RR_2024_l2_combined.txt,../../sourcedata/2024-l2-topics-combined-2.pdf,No,02/29/2024
-Level III,262067,18,s3://s3-assignment2/files_txt/PyPDF_RR_2024_l3_combined.txt,s3://s3-assignment2/files_txt/Grobid_RR_2024_l3_combined.txt,../../sourcedata/2024-l3-topics-combined-2.pdf,No,02/29/2024

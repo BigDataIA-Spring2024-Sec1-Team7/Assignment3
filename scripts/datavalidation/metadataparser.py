@@ -74,10 +74,10 @@ def write_to_csv(obj_list):
     fieldnames = list(MetaDataClass.schema()["properties"].keys())
     
     with open("../clean_csv/meta_data.csv", "w") as fp:
-        writer = csv.DictWriter(fp, fieldnames=fieldnames)
+        writer = csv.DictWriter(fp, fieldnames=fieldnames, quotechar='"', quoting=csv.QUOTE_STRINGS)
         writer.writeheader()
         for obj in obj_list:
-            writer.writerow(json.loads(obj.json()))
+            writer.writerow(obj.model_dump())
 
 if validate_record_count == df.shape[0]:
     print("Successfully validated")

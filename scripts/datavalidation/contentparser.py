@@ -74,9 +74,6 @@ final_df = pd.concat(list_df, ignore_index=True)
 # final_df.to_csv("../clean_csv/contentdata.csv",index=False)
 
 
-
-
-
 df = final_df
 df = df.fillna(np.nan).replace([np.nan], [None])
 df['learning_outcomes'] = df['learning_outcomes'].apply(lambda v: re.sub(r'[\'"‘’”“]|<.*?>', '', str(v)))
@@ -97,24 +94,13 @@ def write_to_csv(obj_list):
     fieldnames = list(ContentClass.schema()["properties"].keys())
     
     with open("../clean_csv/content_data.csv", "w") as fp:
-        writer = csv.DictWriter(fp, fieldnames=fieldnames)
+        writer = csv.DictWriter(fp, fieldnames=fieldnames, quotechar='"', quoting=csv.QUOTE_STRINGS)
         writer.writeheader()
         for obj in obj_list:
-            writer.writerow(json.loads(obj.json()))
+            writer.writerow(obj.model_dump())
 
 if validate_record_count == df.shape[0]:
     print("Successfully validated")
     write_to_csv(contentinstance_list)
 else:
     print("Validation failed in some records. Please fix and retry")
-
-
-
-
-
-
-
-
-
-
-
