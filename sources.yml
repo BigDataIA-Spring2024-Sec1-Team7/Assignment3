@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+    - name: cfa_dev
+      description: This is a replica of the Snowflake database used by our app
+      database: cfa_dev
+      schema: public
+      tables:
+          - name: content_data
+            description: Content extracted from pdf using GROBID.
+          - name: content_meta_data
+            description: Metadata of pdf using GROBID
+          - name: web_scraped_data
+            description: Content extracted through scraping data from CFA
+    - name: cfa_prod
+      description: This is a replica of the Snowflake database used by our app
+      database: cfa_prod
+      schema: public
+      tables:
+          - name: content_data
+            description: Content extracted from pdf using GROBID.
+          - name: content_meta_data
+            description: Metadata of pdf using GROBID
+          - name: web_scraped_data
+            description: Content extracted through scraping data from CFA
