@@ -12,7 +12,7 @@ Build test cases using Pytest for each of the three classes.
 Run transformation workflows using DBT to generate a summary table
 
 ## Codelab Link
-https://codelabs-preview.appspot.com/?file_id=1c6VB_qFBEqGw-6wcCtZOCc7Rcjyu1rTKkr46DdrcOcI#0
+https://docs.google.com/document/d/1c6VB_qFBEqGw-6wcCtZOCc7Rcjyu1rTKkr46DdrcOcI/edit?usp=sharing
 
 
 ## Project Goals
