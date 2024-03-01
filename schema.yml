@@ -1,0 +1,36 @@
+version: 2
+
+models:
+    - name: cfa_summary
+      description: "A summary table for CFA learning outcomes"
+      columns:
+          - name: level
+            description: "CFA level"
+            tests:
+                - not_null
+                - accepted_values:
+                    values: ["Level I", "Level II", "Level III"]
+            data_type: string
+          - name: topic
+            description: "Name of the topic"
+            data_type: string
+          - name: year
+            description: "year"
+            data_type: int
+          - name: no_of_articles
+            description: "Number of artciles under particular topic"
+            tests:
+                - not_null
+            data_type: int
+          - name: min_length_summary
+            description: "Minimum length of summary"
+            data_type: int
+          - name: max_length_summary
+            description: "Maximum length of summary"
+            data_type: int
+          - name: min_lenth_learnOutcome
+            description: "Minimum length of Learning Outcomes"
+            data_type: int
+          - name: max_lenth_learnOutcome
+            description: "Maximum length of Learning Outcomes"
+            data_type: int
